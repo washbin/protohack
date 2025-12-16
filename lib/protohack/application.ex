@@ -9,7 +9,8 @@ defmodule Protohack.Application do
   def start(_type, _args) do
     children = [
       {Protohack.SmokeTest, port: 8989},
-      {Protohack.PrimeTime, port: 8990}
+      {Protohack.PrimeTime, port: 8990},
+      {Protohack.BFormat, port: 8991}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
