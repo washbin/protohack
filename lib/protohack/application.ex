@@ -10,7 +10,10 @@ defmodule Protohack.Application do
     children = [
       {Protohack.SmokeTest, port: 8989},
       {Protohack.PrimeTime, port: 8990},
-      {Protohack.BFormat, port: 8991}
+      {Protohack.BFormat, port: 8991},
+      # Task supervisor for the budget chat
+      {Task.Supervisor, name: Protohack.BudgetChat.Supervisor},
+      {Protohack.BudgetChat, port: 8992}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
