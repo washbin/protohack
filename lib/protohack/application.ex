@@ -14,7 +14,8 @@ defmodule Protohack.Application do
       # Task supervisor for the budget chat
       {Task.Supervisor, name: Protohack.BudgetChat.Supervisor},
       {Protohack.BudgetChat, port: 8992},
-      {Protohack.UnusualDatabase, port: 8993}
+      {Protohack.UnusualDatabase, port: 8993},
+      {Protohack.Mitm, port: 8994}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
